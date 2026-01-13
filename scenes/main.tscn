@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://main001"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/bubble_grid.gd" id="2_grid"]
+[ext_resource type="PackedScene" uid="uid://shooter001" path="res://scenes/shooter.tscn" id="3_shooter"]
+[ext_resource type="PackedScene" uid="uid://hud001" path="res://scenes/ui/hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" uid="uid://gameover001" path="res://scenes/ui/game_over.tscn" id="5_gameover"]
+[ext_resource type="PackedScene" uid="uid://leaderboard001" path="res://scenes/ui/leaderboard.tscn" id="6_leaderboard"]
+[ext_resource type="PackedScene" uid="uid://clearboard001" path="res://scenes/ui/clear_board_celebration.tscn" id="7_celebration"]
+
+[sub_resource type="Gradient" id="Gradient_bg"]
+colors = PackedColorArray(0.878, 0.647, 0.784, 1, 0.565, 0.471, 0.718, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bg"]
+gradient = SubResource("Gradient_bg")
+width = 720
+height = 1280
+fill_from = Vector2(0, 0)
+fill_to = Vector2(0, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 720.0
+offset_bottom = 1280.0
+texture = SubResource("GradientTexture2D_bg")
+
+[node name="BubbleGrid" type="Node2D" parent="."]
+position = Vector2(0, 100)
+script = ExtResource("2_grid")
+
+[node name="DangerLine" type="Line2D" parent="."]
+points = PackedVector2Array(20, 900, 700, 900)
+width = 2.0
+default_color = Color(1, 1, 1, 0.15)
+
+[node name="LauncherSeparator" type="Line2D" parent="."]
+points = PackedVector2Array(20, 1020, 700, 1020)
+width = 2.0
+default_color = Color(1, 1, 1, 0.3)
+
+[node name="Shooter" parent="." instance=ExtResource("3_shooter")]
+position = Vector2(360, 1140)
+
+[node name="HUD" parent="." instance=ExtResource("4_hud")]
+
+[node name="GameOverScreen" parent="." instance=ExtResource("5_gameover")]
+
+[node name="LeaderboardScreen" parent="." instance=ExtResource("6_leaderboard")]
+
+[node name="ClearBoardCelebration" parent="." instance=ExtResource("7_celebration")]
+
+[node name="ScorePopupContainer" type="Node2D" parent="."]
