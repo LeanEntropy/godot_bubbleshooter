@@ -22,13 +22,3 @@ position = Vector2(0, -20)
 
 [node name="NextBubblePos" type="Marker2D" parent="."]
 position = Vector2(50, 20)
-
-[node name="SwapHint" type="Label" parent="."]
-offset_left = -80.0
-offset_top = 60.0
-offset_right = 80.0
-offset_bottom = 83.0
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(1, 1, 1, 0.5)
-text = "TAP or ← → to swap"
-horizontal_alignment = 1

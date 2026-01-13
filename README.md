@@ -80,9 +80,10 @@ All game parameters are in `scripts/config.gd` for easy tuning:
 
 ## Credits
 
-- **Code & Design:** Civax (Ohad Barzilay) - X: [@civaxo](https://x.com/civaxo) [GitHub](https://github.com/LeanEntropy)
 - **Game Assets:** Bubble image and 2 bubble switcher bgs made by [Kenney.nl](https://kenney.nl/) (these are CC0. Thanks Kenney!)
 - **Engine:** [Godot Engine](https://godotengine.org/)
+
+Feel free to ping me: Civax (Ohad Barzilay) - X: [@civaxo](https://x.com/civaxo) [GitHub](https://github.com/LeanEntropy) or if you want to [buy me coffee](https://buymeacoffee.com/civax)
 
 ## License
 
